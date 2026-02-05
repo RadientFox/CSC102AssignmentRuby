@@ -1,0 +1,51 @@
+/* only this for css comments 
+CSS syntax:
+
+
+selector{
+    property: value;
+    property: value;
+
+
+}
+
+selector: 3 options: HTML tag/element, ID of an element (#id), Custo, class - starts. (.classname).
+
+Just use external Css files in this class
+*/
+
+/* applies to whole page */
+body{
+    background-color: indigo;
+    color: rgb(255, 12, 12);
+}
+
+/* just apply to section with the title */
+header{
+    color: darkorchid;
+
+    background-color:crimson;
+    text-align: center;
+}
+
+nav{
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+
+}
+
+#memeImage{
+    position: absolute;
+
+    left: 300px;
+    top: 200px;
+}
+
+footer{
+    text-align: center;
+    margin-right: 200px;
+}
+
