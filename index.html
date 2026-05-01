@@ -40,20 +40,65 @@
 /*
 comments
 */
+let firstName = "Ruby";
+var lastName = "Vaughn";
 
 </script>
 
 
 
-    <h2>Decision Logic (if/else)</h2>
     <h2>Functions</h2>
-    <h2>Loops</h2>
 
+<script>
+    // functions are way to organize chuncks of code and are able to be re used
+
+    function addNumbers(){
+        //create 2 variables to add together
+        let number1 = 5;
+        let number2 = 19;
+
+        let sum = number1 + number2
+
+        //log to the consle
+        console.log("Sum = " + sum)
+    }
+
+    
+addNumbers();
+</script>
+<h2>Decision Logic (if/else)</h2>
+
+<script>
+
+    if(firstName == "Ruby"){
+        console.log("Ruby is present");
+    }else{
+        console.log("Ruby is not present");
+    }
+</script>
+
+
+    <h2>Loops</h2>
+<div>
     <p>
 
-        <img id="memeImage" src="replace_with_the_file_name_and_extension_of_the_image" width="">
+        <img id="memeImage" src="jeffthechesseshark.jpg" width="150">
     
     </p>
+</div>
+
+<h2>Dice Game</h2>
+
+<button onclick="playDiceGame();">Play Game</button>
+<div id="divMessage">Waiting for Game Start</div>
+<div id="divRoll1"></div>
+<div id="divRoll2"></div>
+<div id="divRollSum"></div>
+
+
+
+
+<script src="js_script.js"></script>
 
 
 </body>
