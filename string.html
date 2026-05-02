@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Validation</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Input Validation</h1>
+    </header>
+    <main>
+        <!-- messages to user for inpust -->
+        <div id="divMessage"></div>
+        <form>
+            <!-- add div tag to make both lable and input on same line -->
+            <div>
+                <label for="txtFirstName">First Name: </label>
+                <input type="text" id="txtFirstName">
+            </div>
+
+            <div>
+                <label for="txtLastName">Last Name: </label>
+                <input type="text" id="txtLastName">
+            </div>
+
+            <div>
+                <label for="txtZip">Zip Code: </label>
+                <input type="text" id="txtZip">
+            </div>
+
+            <!-- button to validate form, type to button does not submit the form -->
+            <button type="button" onclick="validate();">Validate!</button>
+
+        </form>
+    </main>
+
+<script src="js_script.js"></script>
+
+</body>
+</html>
