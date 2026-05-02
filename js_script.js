@@ -27,7 +27,7 @@ function playDiceGame(){
 }
 
 function getRandomNumber(){
-    let number = Math.random() + 6;
+    let number = Math.random() * 6;
 
     number = Math.floor(number) +1;
 
@@ -89,3 +89,59 @@ function getRandomNumber(){
 
             document.getElementById("divMessage").textContent = message;
         }
+
+
+// image moving
+   // create var to track intercal ik
+    let intervalId =0;
+
+
+    // function to move image
+    function startMoveImage(){
+    let memeImage = document.getElementById("memeImage");
+
+        //setInterval to repeatedly run code
+        //function(){} is an anonymous function - way to run a chunk of code 1 time as a funtion argument
+        intervalId = setInterval( function(){
+
+            // get random number for top and left
+            let topCord = getRadnomNumber2();
+            let leftCord = getRadnomNumber2();
+
+            
+    memeImage.style.left = leftCord +"px";
+    memeImage.style.top = topCord + "px";
+
+        }, 1000) // 1000miliseconds = 1 second
+
+
+
+
+    //enable stop button
+    document.getElementById("btnStop").disabled = false;
+
+//disable start button
+    document.getElementById("btnStart").disabled = true;
+    }
+
+    // function to stop image moving\
+    function stopMoveImage(){
+        // call JS function that stops set Interval from running
+        clearInterval(intervalId)
+
+        
+    //disable stop button
+    document.getElementById("btnStart").disabled = false;
+
+//enable start button
+    document.getElementById("btnStop").disabled = true;
+    }
+
+// function for a random number
+    function getRadnomNumber2(){
+        return Math.floor(Math.random() * 1000)
+
+
+    }
+
+

@@ -38,6 +38,7 @@ nav{
 }
 
 #memeImage{
+    /* neccesary for image to move */
     position: absolute;
 
     left: 300px;
