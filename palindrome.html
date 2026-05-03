@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+
+    <!-- link to css file -->
+    <link rel="stylesheet" href="main.css">
+
+
+</head>
+<body>
+
+    <header>
+        <h1>Palindrom Checker</h1>
+    </header>
+    <main>
+        <form onsubmit="checkPalin(event);">
+
+            <!-- label to expain what is needed -->
+            <label for="txtWord"> Enter a word of phrase:</label>
+            <!-- text box to type word -->
+            <input type="text" id="txtWord">
+            <!-- button to test teh word -->
+            <input type="submit" value="Check word">
+        </form>
+
+        <!-- div to hold result of palindrome check -->
+         <div id="divMessage"></div>
+    </main>
+
+    <script>
+
+        function checkPalin(event){
+
+            //preven form from submitting
+            event.preventDefault();
+
+            // var to store users word
+            let wordToTest = document.getElementById("txtWord").value;
+
+            console.log("wordToTest= " + wordToTest);
+
+
+            // canll function to test
+            isPalin(wordToTest);
+        }
+
+        //function to test if a string is the same backwards and forwards
+        function isPalin(strToTest){
+            // convert all leters ro lowercase
+            strToTest = strToTest.toLowerCase();
+
+            console.log("strToTest= " + strToTest);
+
+            // new var to keep the original
+            let strReverse = strToTest;
+
+
+            // convert reverse string to array 
+            strReverse = strReverse.split("").reverse().join("");
+
+            console.log("strReverse= " + strReverse)
+        }
+
+    </script>
+    
+</body>
+</html>
