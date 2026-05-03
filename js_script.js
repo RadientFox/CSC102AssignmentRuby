@@ -145,3 +145,99 @@ function getRandomNumber(){
     }
 
 
+
+    
+        function checkPalin(event){
+
+            //preven form from submitting
+            event.preventDefault();
+
+            // var to store users word
+            let wordToTest = document.getElementById("txtWord").value;
+
+            console.log("wordToTest= " + wordToTest);
+
+
+            // canll function to test
+            let bPalin = isPalin(wordToTest);
+
+            let divMessage = document.getElementById("divMessage")
+
+            // message for user bassed on value
+            if(bPalin){ // if bPalin is equivalent to bPalin == true
+
+                divMessage.textContent = "Is Palindrome";
+            }
+            else{
+                divMessage.textContent = "Is not Palindrome";
+
+            }
+        }
+
+        //function to test if a string is the same backwards and forwards
+        function isPalin(strToTest){
+            // convert all leters ro lowercase
+            strToTest = strToTest.toLowerCase();
+            //replace all indtances of /g of spaces /\s with an empty string
+            strToTest = strToTest.replace(/\s/g, "");
+
+            console.log("strToTest= " + strToTest);
+
+            // new var to keep the original
+            let strReverse = strToTest;
+
+
+            // convert reverse string to array 
+            strReverse = strReverse.split("").reverse().join("");
+
+            console.log("strReverse= " + strReverse)
+
+            //compare original string with reversed
+            // if match returns true, otherwise is false
+            if(strReverse == strToTest){
+                return true;
+            }
+
+            // if get to this line it must not be palindrom so returns false
+            return false;
+        }
+
+
+
+// function adds audio element to page
+
+        function addAudio(){
+            let divAudio = document.getElementById("divAudio");
+
+            // creating an audio element
+            let audioElement = document.createElement("audio");
+
+            // set attributes to element
+            //add ID so element is easier to work eith
+            audioElement.setAttribute("id", "myAudio");
+
+            audioElement.setAttribute("src","Breeze_idle.mp3");
+
+            //aadding controls
+            audioElement.setAttribute("controls", "controls");
+
+            // add new audio element to the div that will host it
+            divAudio.appendChild(audioElement);
+
+            //disable the user from clicking add button after already added
+            document.getElementById("btnAddAudio").hidden = true;
+
+            document.getElementById("btnPlayAudio").hidden = false;
+            document.getElementById("btnPauseAudio").hidden = false;
+
+
+        }
+
+// function to play the audio
+    function playAudio(){
+        // create a nickname to the audio element
+        let myAudio = document.getElementById("myAudio");
+        myAudio.play();
+
+    }
+
