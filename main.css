@@ -16,13 +16,13 @@ Just use external Css files in this class
 
 /* applies to whole page */
 body{
-    background-color: indigo;
-    color: rgb(255, 12, 12);
+    background-color: rgb(119, 83, 145);
+    color: rgb(0, 0, 0);
 }
 
 /* just apply to section with the title */
 header{
-    color: darkorchid;
+    color: rgb(255, 255, 255);
 
     background-color:crimson;
     text-align: center;
@@ -50,3 +50,22 @@ footer{
     margin-right: 200px;
 }
 
+            table{
+                border: 3px solid grey;
+                /* will cause multiple overlapping borders to make one */
+                border-collapse: collapse;
+            }
+
+            tr{
+
+                border: 3px solid black;
+            }
+
+            td{
+                padding: 5px;
+            }
+
+            tr:nth-child(even){
+                background-color: aquamarine;
+                color: blueviolet;
+            }
