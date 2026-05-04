@@ -69,3 +69,11 @@ footer{
                 background-color: aquamarine;
                 color: blueviolet;
             }
+
+    /* menu styles
+    nav a - styles will only apply to anchor tags in nav section */
+
+    nav a{
+        text-decoration: none;
+        color: chartreuse;
+    }
