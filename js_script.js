@@ -218,6 +218,10 @@ function getRandomNumber(){
 
             audioElement.setAttribute("src","Breeze_idle.mp3");
 
+
+            // volume
+            audioElement.volume = .5;
+            
             //aadding controls
             audioElement.setAttribute("controls", "controls");
 
@@ -241,3 +245,11 @@ function getRandomNumber(){
 
     }
 
+
+    // function to pause the audio
+    function pauseAudio(){
+        // create a nickname to the audio element
+        let myAudio = document.getElementById("myAudio");
+        myAudio.pause();
+
+    }
